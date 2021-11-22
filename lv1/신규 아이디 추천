@@ -9,7 +9,7 @@ class Solution {
 
         fun deleteDotAtFirstOrLast(stringBuilder: StringBuilder): StringBuilder{
             if(stringBuilder.length>0 && stringBuilder.first() == '.'){
-                stringBuilder.deleteCharAt(0)
+                stringBuilder.deleteCharAt(0)   // drop(int), dropLast(int)는 int만큼 제거한 후 반환 할 뿐, 실제로 제거하진 않음
             }
             if(stringBuilder.length>0 && stringBuilder.last() == '.'){
                 stringBuilder.deleteCharAt(stringBuilder.length -1)
