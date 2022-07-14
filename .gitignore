@@ -99,7 +99,7 @@ hs_err_pid*
 
 # Default ignored files
 .idea/shelf/
-/workspace.xml
+.idea/workspace.xml
 # Editor-based HTTP Client requests
 .idea/httpRequests/
 # Datasource local storage ignored files
