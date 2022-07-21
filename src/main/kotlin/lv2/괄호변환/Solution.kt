@@ -2,7 +2,7 @@ package lv2.괄호변환
 
 internal class Solution {
 
-    fun execute(inputString: String): String {
+    fun solution(inputString: String): String {
         if(inputString.length == 0) return ""
 
         val stringBuilder = StringBuilder()
@@ -23,11 +23,11 @@ internal class Solution {
 
         if(u[0] == '('){ // 올바른 괄호 문자열일 때
             stringBuilder.append(u)
-            stringBuilder.append(execute(v))
+            stringBuilder.append(solution(v))
         }
         else{ // 올바른 괄호 문자열이 아닐 때
             stringBuilder.append('(')
-            stringBuilder.append(execute(v))
+            stringBuilder.append(solution(v))
             stringBuilder.append(')')
             u.substring(1, u.length-1).forEach {
                 stringBuilder.append(

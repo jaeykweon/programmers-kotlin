@@ -9,7 +9,7 @@ class SolutionTest{
     fun solution() {
         val testClass = Solution()
         testCaseList.forEach{
-            testClass.execute(
+            testClass.solution(
                 idList = it.key.idList,
                 report = it.key.report,
                 k = it.key.k

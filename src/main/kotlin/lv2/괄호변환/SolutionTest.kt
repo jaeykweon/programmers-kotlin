@@ -21,7 +21,7 @@ internal class SolutionTest{
 
         val myLogic = Solution()
         val myAnswerList = testBed.map {
-            myLogic.execute(it)
+            myLogic.solution(it)
         }
 
         val answerPair = answerList.zip(myAnswerList)

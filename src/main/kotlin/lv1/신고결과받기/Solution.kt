@@ -7,7 +7,7 @@ internal class Solution {
     // 신고테이블 돌면서 신고당한 리스트에 += 1
     // 신고당한 리스트에서 k개 이상인 사람을 신고한 사람 메일 발송 리스트 +=1
 
-    fun execute(idList: Array<String>, report: Array<String>, k: Int): IntArray {
+    fun solution(idList: Array<String>, report: Array<String>, k: Int): IntArray {
         val idCount = idList.size
         val idTable = idList.mapIndexed { i, s -> s to i  }.toMap(); // println(idTable)
 
