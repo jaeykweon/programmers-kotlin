@@ -37,27 +37,27 @@ class Solution {
 }
 
 class DoublePriorityQueue {
-    private val ascPQ = PriorityQueue<Int>(reverseOrder())
-    private val dscPQ = PriorityQueue<Int>()
+    private val dscPQ = PriorityQueue<Int>(reverseOrder())
+    private val ascPQ = PriorityQueue<Int>()
 
     fun add(input: Int) {
-        ascPQ.add(input)
         dscPQ.add(input)
+        ascPQ.add(input)
     }
 
     fun deleteMax() {
-        if (ascPQ.isEmpty()) return;
-        val removed = ascPQ.poll()
-        dscPQ.remove(removed)
-    }
-
-    fun deleteMin() {
         if (dscPQ.isEmpty()) return;
         val removed = dscPQ.poll()
         ascPQ.remove(removed)
     }
 
-    fun getMax(): Int? = ascPQ.peek()
+    fun deleteMin() {
+        if (ascPQ.isEmpty()) return;
+        val removed = ascPQ.poll()
+        dscPQ.remove(removed)
+    }
 
-    fun getMin(): Int? = dscPQ.peek()
+    fun getMax(): Int? = dscPQ.peek()
+
+    fun getMin(): Int? = ascPQ.peek()
 }
